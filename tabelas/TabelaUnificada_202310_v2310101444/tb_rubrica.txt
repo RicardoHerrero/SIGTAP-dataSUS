@@ -1,0 +1,33 @@
+040009Atendimento/acompanhamento em reabilitação física, mental, visual, auditiva e múltiplas deficiências202310
+040013Atendimento/acompanhamento de diagnóstico de doenças endocrinas/metabólicas e nutricionais          202310
+040017Nefrologia                                                                                          202310
+040024Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal(inclui pré e pós operatório)       202310
+040028Outras cirurgias plásticas/reparadoras                                                              202310
+040030Sequenciais                                                                                         202310
+040032Transplantes de orgãos, tecidos e células                                                           202310
+040033Medicamentos para transplante                                                                       202310
+040038OPM para transplantes                                                                               202310
+040041Central Nacional de Regulação de Alta Complexidade (CNRAC)                                          202310
+040044Redesignação e Acompanhamento                                                                       202310
+040049Implementar Cirg. CV Pediátrica                                                                     202310
+040055Transplante - Histocompatibilidade                                                                  202310
+040062Doenças Raras                                                                                       202310
+040063Cadeiras de Rodas                                                                                   202310
+040065Medicamentos em Urgência                                                                            202310
+040066Cirurgias Eletivas - Componente Único                                                               202310
+040067Atenção Especializada em Saúde Auditiva                                                             202310
+040068Terapias Especializadas em Angiologia                                                               202310
+040069Tratamento de Doença Macular                                                                        202310
+040070OPME Não Relacionados ao Ato Cirúrgico                                                              202310
+040071Diagnóstico/tratamento em oncologia                                                                 202310
+040072Diagnóstico de trombofilia em gestante                                                              202310
+040073Reabilitação Pós-COVID-19                                                                           202310
+040074Telemedicina em Urgência                                                                            202310
+040075Fisioterapia Cardiovascular                                                                         202310
+040076Hemodinâmica em atendimento de urgência                                                             202310
+040077Exames Sorológicos e Imunológicos                                                                   202310
+040078QualiSUS Cardio                                                                                     202310
+040079Pré-cirúrgico em Cirurgias Prioritárias                                                             202310
+040080Redução das Filas de Procedimentos Eletivos.                                                        202310
+040081Síndrome Respiratória Aguda Grave - SRAG                                                            202310
+040082Alta Complexidade em Cardiologia                                                                    202310
