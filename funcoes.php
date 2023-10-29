@@ -159,6 +159,66 @@ function gerarCreateSQLConteudo($path, $arquivo){
     return $sql;
 }
 
+function gerarCreateSQLConteudoCSV($path, $pathZIP, $arquivo){
+
+    $arquivoLayout = str_replace('.txt', '_layout.txt', $arquivo); 
+    $arquivoCsv = str_replace('.txt', '.csv', $arquivo); 
+
+    if( !file_exists($path."/".$arquivoLayout) ) return false;
+    if( !file_exists($path."/".$arquivo) ) return false;
+
+    $txt_layout = fopen($path.'/'.$arquivoLayout,'r');
+    $linha = 1;
+    $colunas = []; 
+
+    while ($conteudo = fgets($txt_layout)) {
+        if( $linha > 1 ){
+            $pecas = explode(",", $conteudo);
+
+            $colunasLayout['coluna'] = $pecas[0];
+            $colunasLayout['tamanho'] = $pecas[1];
+            $colunasLayout['inicio'] = $pecas[2];
+            $colunasLayout['fim'] = $pecas[3];
+            $colunasLayout['tipo'] = $pecas[4];
+
+            array_push($colunas, $colunasLayout);
+        }
+        $linha ++;
+    }
+
+    $txt_conteudo = fopen($path.'/'.$arquivo,'r');
+    $linha = 1;
+
+    //criando o arquivo
+
+    $pathFolder = $path."/".$pathZIP;
+    if (!file_exists($pathFolder)) mkdir($pathFolder);
+    if (!$fileCSV_Temp = fopen($pathFolder."/".$arquivoCsv,"w")) return false;
+
+    while ($conteudo = fgets($txt_conteudo)) {
+
+        $linhaColuna = "";
+        $value = "";
+
+        foreach ($colunas as $posicao) {
+
+            if( $linha==1 ) $linhaColuna .= $posicao['coluna'].",";
+            $inicio = $posicao['inicio'] -1;
+            $value  .= trim(substr($conteudo, $inicio, $posicao['tamanho'])).",";    
+        }
+
+        /*
+        GRANDO A LINHA*/
+        if( $linha==1 ) fwrite($fileCSV_Temp,$linhaColuna."\n");
+        fwrite($fileCSV_Temp,$value."\n");
+
+        $linha ++;
+    }
+
+    fclose($fileCSV_Temp);
+    return true;
+}
+
 function criarArquivo( $nomeFile, $conteudo ){
 
     $newFile = fopen($nomeFile, "w");

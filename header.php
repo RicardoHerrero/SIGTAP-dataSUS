@@ -78,7 +78,7 @@
               <p class="lead text-muted">
                       <ol>
                           <li>.SQL</li>
-                          <li>.CSV (em breve)</li>
+                          <li>.CSV</li>
                       </ol>
               </p>
             </div>
