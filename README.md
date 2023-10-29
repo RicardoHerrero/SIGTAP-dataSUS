@@ -10,3 +10,12 @@
   <li>.CSV (em breve)</li>
 </ol>
 </p>
+
+<h1 class="jumbotron-heading text-center">LEIMA-ME</h1>
+<p class="lead text-muted">Para usar, basta baixar este script para um servidor PHP (Apache).</p>
+<ul>
+  <li>Execute o script através de servidor Apache/ PHP;</li>
+  <li>Baixe em seu computador a versão da competência desejada, atavés do link: http://sigtap.datasus.gov.br/tabela-unificada/app/download.jsp;</li>
+  <li>Descompactar o arquivo .ZIP na pasta tabelas deste projeto;</li>
+  <li>Tenha certeza que esta pasta <b>tabelas</b> tem permissão de escrita.</li>
+</ul>
