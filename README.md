@@ -15,6 +15,13 @@
 <p class="lead text-muted">Para usar, basta baixar este script para um servidor PHP (Apache).</p>
 <ul>
   <li>Execute o script através de servidor Apache/ PHP;</li>
+  <ul>
+      <li>Dicas:</li>
+      <li>Salvar este projeto na pasta do Apache;</li> 
+      <li> --- Geralmente em maquinas Linux: /var/www/html</li> 
+      <li> --- Geralmente em maquinas Windows: /etc/apache/httpd</li>
+      <li>Para executar, tente acessar via navegador http://localhost</li>
+  </ul>
   <li>Baixe em seu computador a versão da competência desejada, atavés do link: http://sigtap.datasus.gov.br/tabela-unificada/app/download.jsp;</li>
   <li>Descompactar o arquivo .ZIP na pasta tabelas deste projeto;</li>
   <li>Tenha certeza que esta pasta <b>tabelas</b> tem permissão de escrita.</li>
