@@ -44,9 +44,6 @@ function gerarCreateSQLConteudo($path, $arquivo){
     $arquivoLayout = str_replace('.txt', '_layout.txt', $arquivo); 
     $dbTabelaNome = str_replace('.txt', '', $arquivo); 
 
-    //echo "file: ".$arquivo."<br>";
-    //echo "file layout: ".$arquivoLayout."<br>";
-
     if( !file_exists($path."/".$arquivoLayout) ) return false;
     if( !file_exists($path."/".$arquivo) ) return false;
 
@@ -70,15 +67,6 @@ function gerarCreateSQLConteudo($path, $arquivo){
         }
         $linha ++;
     }
-
-    /*
-    echo "Tamanho eh ".count($colunas)."<br>";
-    echo "coluna 01 - Nome ".$colunas[0]['coluna']."<br>";
-    echo "coluna 01 - Inicio ".$colunas[0]['inicio']."<br>";
-    echo "coluna 01 - Inicio ".$colunas[0]['fim']."<br>";
-
-    print_r( $colunas );
-    exit("foiiii????");*/
 
     $sql = "DELETE FROM $dbTabelaNome; INSERT INTO $dbTabelaNome ( ";
     $sqlColunas = "";
@@ -106,39 +94,6 @@ function gerarCreateSQLConteudo($path, $arquivo){
             }
 
             $linhaValue .= $value;
-
-            //DEBUG
-            /*
-            if( $linha==1 ){
-                echo "coluna: ".$posicao['coluna']."<br>";
-                echo "inicio: ".$posicao['inicio']."<br>";
-                echo "fim: ".$posicao['fim']."<br>";
-                echo "tamanho: ".$posicao['tamanho']."<br>";
-                echo "fim: ".$posicao['tipo'];
-                echo "<b>Value: ".$value."</b>";
-                echo "<hr>";
-            }*/
-
-            //exemplo:
-            /*
-            0201010569
-            1720
-            0000000
-            0006000
-            0000000
-            202310
-            */
-
-            //$colunaName = $posicao['coluna'];
-            //$colunaValue = substr($conteudo, $posicao['inicio'], $posicao['fim']);
-
-            /*
-            
-            INSERT INTO `CargaTemp` (`id`, `clienteid`, `clienterefexterna`, `clientenome`, `unidadeid`, `unidadenome`, `unidademunicipio`, `unidadeuf`, `paciente`, `pacienteidade`, `pacientesexo`, `pacientecarteirinha`, `pacientedatainternacao`, `pacientecid`, `guiainternacao`)
-            VALUES
-	        (23453, 123, 72, 'UNIMED ARACATUBA COOP TRABALHO MEDICO', 165, 'HOSPITAL UNIMED ARACATUBA', 'ARACATUBA', 'SP', 'ALINE BORGES DOS SANTOS', 36, 2, '970.0019002315298', '2023-09-04 00:00:00', 'O82.1 ', '202303552363');
-            
-            */
 
             $h ++;
         }
