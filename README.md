@@ -1,4 +1,4 @@
-# SIGTAP-dataSUS
+# SIGTAP dataSUS
 
 <h1 class="jumbotron-heading text-center">Objetivos deste Projeto</h1>
 <p class="lead text-muted">Os dados do <span class="badge badge-warning">SIGTAP</span> são organizados em um conjunto de pouco mais de 80 arquivos, disponibilizados mensalmente pelo próprio DataSUS.</p>
