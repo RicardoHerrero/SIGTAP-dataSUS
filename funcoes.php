@@ -154,12 +154,14 @@ function gerarCreateSQLConteudoCSV($path, $pathZIP, $arquivo){
 
         $linhaColuna = "";
         $value = "";
-
+        $divisor = ",";
+        $hh = 0;
         foreach ($colunas as $posicao) {
-
-            if( $linha==1 ) $linhaColuna .= $posicao['coluna'].",";
+            $hh++;
+            if( count($colunas) == $hh ) $divisor = "";
+            if( $linha==1 ) $linhaColuna .= $posicao['coluna'].$divisor;
             $inicio = $posicao['inicio'] -1;
-            $value  .= trim(substr($conteudo, $inicio, $posicao['tamanho'])).",";    
+            $value  .= trim(substr($conteudo, $inicio, $posicao['tamanho'])).$divisor;    
         }
 
         /*
